@@ -3,17 +3,19 @@
 ### It’s an in-memory, key–value database designed for speed, simplicity, and transient data, while PostgreSQL/MySQL are persistent, relational databases designed for structured, durable data and complex queries.
 
 ⚖️ Redis vs. Relational Databases (PostgreSQL, MySQL, MSSQL)
-Feature	Redis	PostgreSQL / MySQL / MSSQL
-Type	In-memory key–value database	Relational database
-Data Storage	RAM (optionally persisted to disk)	Disk-based storage
-Speed	⚡ Extremely fast (microseconds)	Slower (milliseconds)
-Data Model	Key → Value (Strings, Lists, Sets, Hashes, etc.)	Tables, rows, columns, joins
-Persistence	Optional (can persist snapshots or logs)	Always persistent
-Query Language	Simple commands (GET, SET, HGET, etc.)	SQL
-Use Case	Cache, session store, rate limiter, queues	Transactions, complex queries, reporting
-ACID Compliance	Partial (depends on config)	Full ACID transactions
-Scalability	Easy to scale horizontally	More complex (read replicas, sharding)
-Durability	Optional, can lose data if configured as cache	High durability, strong consistency
+
+- Feature	Redis	PostgreSQL / MySQL / MSSQL
+- Type	In-memory key–value database	Relational database
+- Data Storage	RAM (optionally persisted to disk)	Disk-based storage
+- Speed	⚡ Extremely fast (microseconds)	Slower (milliseconds)
+- Data Model	Key → Value (Strings, Lists, Sets, Hashes, etc.)	Tables, rows, columns, joins
+- Persistence	Optional (can persist snapshots or logs)	Always persistent
+- Query Language	Simple commands (GET, SET, HGET, etc.)	SQL
+- Use Case	Cache, session store, rate limiter, queues	Transactions, complex queries, reporting
+- ACID Compliance	Partial (depends on config)	Full ACID transactions
+- Scalability	Easy to scale horizontally	More complex (read replicas, sharding)
+- Durability	Optional, can lose data if configured as cache	High durability, strong consistency
+
 💡 Think of Redis as a Complement, Not a Replacement
 
 -----------------------------------------------------------------------------------------------------
