@@ -103,6 +103,16 @@ A **Rolling Upgrade** updates your application gradually, one instance at a time
 
 ---
 
+### **💪 Scaling for 10,000 Parallel Users **
+- Recommended Cluster Configuration
+Component	Specification	Purpose
+- VM Type	4 vCPU, 16 GB RAM (baseline)	Each node handles ~2,000 concurrent users
+- Kubernetes Cluster Size	5 nodes minimum	Supports 10k concurrent sessions
+- Autoscaling	Enabled via HPA (Horizontal Pod Autoscaler)	Scales pods based on CPU/Memory usage
+- Database Instance	8 vCPU, 32 GB RAM, SSD Storage	Handles concurrent DB reads/writes
+- Cache Node	Redis 2 vCPU, 8 GB RAM	Session caching, offload DB load
+- Load Balancer	Managed (ALB / App Gateway / GCP LB)	Handles 10k concurrent TCP connections
+
 ## 🧩 Kubernetes Rolling Update Example
 
 ```yaml
